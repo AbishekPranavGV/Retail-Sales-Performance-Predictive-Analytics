@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Sales Performance & Predictive Analytics</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --success: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1rem 3rem 1rem;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    header {
+      padding: 3.5rem 0 2rem 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #fff; }
+    p.lead { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .kpi-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .kpi-num { font-size: 2.2rem; font-weight: 800; color: var(--accent); margin-bottom: 0.25rem; }
+    .kpi-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
+    .section-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; }
+    .dashboard-preview {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+    .dashboard-preview img { width: 100%; height: auto; display: block; }
+    .dashboard-caption { padding: 1rem 1.5rem; font-size: 0.95rem; color: var(--text-muted); border-top: 1px solid var(--border); }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .info-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; }
+    .info-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: #fff; }
+    .info-card ul { padding-left: 1.25rem; }
+    .info-card li { margin-bottom: 0.5rem; color: var(--text-muted); }
+    .downloads-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #2563eb;
+      color: #fff;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s ease;
+    }
+    .btn:hover { background: #1d4ed8; }
+    .btn-secondary { background: #334155; }
+    .btn-secondary:hover { background: #475569; }
+    footer { text-align: center; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 4rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Predictive Analytics Case Study</div>
+      <h1>Retail Sales Performance & Predictive Analytics</h1>
+      <p class="lead">Bridging the gap between warehouse logistics and consumer demand using SQL pipelines, ARIMA & Facebook Prophet forecasting.</p>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">85%</div>
+        <div class="kpi-label">Forecast Accuracy Achieved</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">10 hrs/wk</div>
+        <div class="kpi-label">Manual Reporting Automated</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">70%</div>
+        <div class="kpi-label">Profit Driven by Top 20% SKUs</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">$1B+</div>
+        <div class="kpi-label">Inventory Distortions Solved</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Interactive Executive Power BI Dashboard</h2>
+    <div class="dashboard-preview">
+      <img src="Dasboard.png" alt="Power BI Retail Sales Performance Dashboard">
+      <div class="dashboard-caption">
+        <strong>Figure 1.0:</strong> Executive dashboard tracking gross margin, store-level inventory turnover, regional demand variance, and product stockout risk metrics.
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="info-card">
+        <h3>Project Architecture</h3>
+        <ul>
+          <li><strong>Business Analyst Lifecycle:</strong> Authored BRDs and FRDs aligning KPIs (turnover ratio, sell-through).</li>
+          <li><strong>Data Engineering:</strong> Engineered SQL CTEs and Window Functions for rolling 7-day and 30-day demand.</li>
+          <li><strong>Predictive Modeling:</strong> ARIMA and Facebook Prophet for seasonality and promotional volatility.</li>
+          <li><strong>Power BI Integration:</strong> Interactive DAX calculations and executive drill-throughs.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Artifacts & Downloads</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">Access project source code, models, and specifications directly:</p>
+        <div class="downloads-grid">
+          <a class="btn" href="Retail.pdf" target="_blank">Download Report (PDF)</a>
+          <a class="btn btn-secondary" href="retail-sales-analytics/Dashboard/Retail.pbix">Power BI (.pbix)</a>
+          <a class="btn btn-secondary" href="retail-sales-analytics/Data/retail.csv">Raw Dataset (.csv)</a>
+          <a class="btn btn-secondary" href="retail-sales-analytics/SQL_scripts/data_cleaning_and_engineering.sql">SQL Pipeline</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by <a href="https://github.com/AbishekPranavGV" target="_blank">Abishek Pranav GV</a> | Built and Deployed with GitHub Actions & GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
